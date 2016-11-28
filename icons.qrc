@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file alias="icon_trayIcon">icons/website_48px_26133_easyicon.net.ico</file>
+        <file alias="icon_start1">icons/Start_128px_1186321_easyicon.net.ico</file>
+        <file alias="icon_stop1">icons/stop_128px_1201373_easyicon.net.ico</file>
+        <file alias="icon_about">icons/about_256px_1074528_easyicon.net.png</file>
+        <file alias="icon_restart1">icons/restart_128px_28394_easyicon.net.ico</file>
+        <file alias="icon_configration">icons/set_system_128px_12353_easyicon.net.ico</file>
+        <file alias="icon_folder_mongodb">icons/reged_folder_128px_1145722_easyicon.net.ico</file>
+        <file alias="icon_folder_projectfolder">icons/notepads_folder_128px_1145719_easyicon.net.ico</file>
+        <file alias="icon_check2">icons/check_128px_1150548_easyicon.net.ico</file>
+        <file alias="icon_check">icons/Check_128px_1161655_easyicon.net.ico</file>
+        <file alias="icon_reset">icons/Reload_128px_1161664_easyicon.net.ico</file>
+        <file alias="icon_start">icons/Play_128px_1180713_easyicon.net.ico</file>
+        <file alias="icon_restart">icons/Reload_128px_1180716_easyicon.net.ico</file>
+        <file alias="icon_stop">icons/Stop_128px_1180724_easyicon.net.ico</file>
+        <file alias="icon_qq_chat">icons/qq1.png</file>
+        <file alias="icon_qq_add">icons/qq2.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>598</width>
+    <height>743</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Web Control</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/icon/icon_trayIcon</normaloff>:/icon/icon_trayIcon</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>50</width>
+    <height>50</height>
+   </size>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QxtGroupBox" name="qxtGroupBoxMongodb">
+      <property name="toolTip">
+       <string>MongoDB服务
+你可以选择是否启动此服务</string>
+      </property>
+      <property name="title">
+       <string>MongoDB 服务</string>
+      </property>
+      <property name="collapsive" stdset="0">
+       <bool>true</bool>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QLabel" name="labelStatusMongodb">
+         <property name="toolTip">
+          <string>MongoDB服务的状态</string>
+         </property>
+         <property name="text">
+          <string>Not Running</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="textBrowserMongodbStatus"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QxtGroupBox" name="qxtGroupBoxNode">
+      <property name="toolTip">
+       <string>Node服务
+你可以选择是否启动此服务</string>
+      </property>
+      <property name="title">
+       <string>Node</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLabel" name="labelStatusNode">
+         <property name="toolTip">
+          <string>Node服务
+你可以选择是否启动此服务</string>
+         </property>
+         <property name="text">
+          <string>Not  Running</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextBrowser" name="textBrowserNodeStatus"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="title">
+       <string>Service Manage</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="pushButtonStartService">
+           <property name="toolTip">
+            <string>启动服务
+启动您所选的服务项</string>
+           </property>
+           <property name="text">
+            <string>Start Service</string>
+           </property>
+           <property name="icon">
+            <iconset resource="icons.qrc">
+             <normaloff>:/icon/icon_start</normaloff>:/icon/icon_start</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonStopService">
+           <property name="toolTip">
+            <string>终止所有服务</string>
+           </property>
+           <property name="text">
+            <string>Stop Service</string>
+           </property>
+           <property name="icon">
+            <iconset resource="icons.qrc">
+             <normaloff>:/icon/icon_stop</normaloff>:/icon/icon_stop</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButtonRestartService">
+           <property name="toolTip">
+            <string>重新启动服务</string>
+           </property>
+           <property name="statusTip">
+            <string/>
+           </property>
+           <property name="text">
+            <string>Restart Service</string>
+           </property>
+           <property name="icon">
+            <iconset resource="icons.qrc">
+             <normaloff>:/icon/icon_restart</normaloff>:/icon/icon_restart</iconset>
+           </property>
+           <property name="shortcut">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>598</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionConfiguration"/>
+   </widget>
+   <widget class="QMenu" name="menuTools_2">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionStartNpmInstall"/>
+   </widget>
+   <widget class="QMenu" name="menuService">
+    <property name="title">
+     <string>Service</string>
+    </property>
+    <addaction name="actionStartService"/>
+    <addaction name="actionStopService"/>
+    <addaction name="actionRestartService"/>
+   </widget>
+   <addaction name="menuService"/>
+   <addaction name="menuTools_2"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icon/icon_about</normaloff>:/icon/icon_about</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionConfiguration">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icon/icon_configration</normaloff>:/icon/icon_configration</iconset>
+   </property>
+   <property name="text">
+    <string>Configuration...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionStartNpmInstall">
+   <property name="text">
+    <string>start npm install</string>
+   </property>
+   <property name="toolTip">
+    <string>Run &quot;npm install&quot; at your project folder</string>
+   </property>
+  </action>
+  <action name="actionStartService">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icon/icon_start</normaloff>:/icon/icon_start</iconset>
+   </property>
+   <property name="text">
+    <string>Start Service</string>
+   </property>
+  </action>
+  <action name="actionStopService">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icon/icon_stop</normaloff>:/icon/icon_stop</iconset>
+   </property>
+   <property name="text">
+    <string>Stop Service</string>
+   </property>
+  </action>
+  <action name="actionRestartService">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icon/icon_restart</normaloff>:/icon/icon_restart</iconset>
+   </property>
+   <property name="text">
+    <string>Restart Service</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QxtGroupBox</class>
+   <extends>QGroupBox</extends>
+   <header>QxtGroupBox</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
